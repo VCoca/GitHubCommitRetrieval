@@ -10,9 +10,6 @@
 *.userosscache
 *.sln.docstates
 
-# Lokalni fajl sa tajnim API ključevima
-PrviZadatak/AppSettings.json
-
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

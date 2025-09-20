@@ -9,7 +9,6 @@ namespace PrviZadatak.Configuration
 {
     public class AppSettings
     {
-        public string ApiKey { get; set; } = string.Empty;
         public int Port { get; set; }
         public int CacheSize { get; set; }
 
@@ -23,7 +22,6 @@ namespace PrviZadatak.Configuration
                 .AddJsonFile("AppSettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
-            ApiKey = config["ApiKey"] ?? string.Empty;
             Port = int.TryParse(config["Port"], out var port) ? port : 8080;
             CacheSize = int.TryParse(config["CacheSize"], out var cacheSize) ? cacheSize : 128;
         }
